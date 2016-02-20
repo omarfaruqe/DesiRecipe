@@ -8,13 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		42DE58DF1C78312E006D047F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42DE58DE1C78312E006D047F /* AppDelegate.swift */; };
-		42DE58E11C78312E006D047F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42DE58E01C78312E006D047F /* ViewController.swift */; };
 		42DE58E41C78312E006D047F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42DE58E21C78312E006D047F /* Main.storyboard */; };
 		42DE58E71C78312E006D047F /* DeshiRecipe.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 42DE58E51C78312E006D047F /* DeshiRecipe.xcdatamodeld */; };
 		42DE58E91C78312E006D047F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42DE58E81C78312E006D047F /* Assets.xcassets */; };
 		42DE58EC1C78312E006D047F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42DE58EA1C78312E006D047F /* LaunchScreen.storyboard */; };
 		42DE58F71C78312E006D047F /* DeshiRecipeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42DE58F61C78312E006D047F /* DeshiRecipeTests.swift */; };
 		42DE59021C78312E006D047F /* DeshiRecipeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42DE59011C78312E006D047F /* DeshiRecipeUITests.swift */; };
+		42DE59101C783555006D047F /* DeshiRecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42DE590F1C783555006D047F /* DeshiRecipeViewController.swift */; };
+		42DE59121C78356D006D047F /* AddRecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42DE59111C78356D006D047F /* AddRecipeViewController.swift */; };
+		42DE59141C78357C006D047F /* DetailsRecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42DE59131C78357C006D047F /* DetailsRecipeViewController.swift */; };
+		42DE59161C7835A0006D047F /* RecipeListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42DE59151C7835A0006D047F /* RecipeListTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +40,6 @@
 /* Begin PBXFileReference section */
 		42DE58DB1C78312E006D047F /* DeshiRecipe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeshiRecipe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42DE58DE1C78312E006D047F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		42DE58E01C78312E006D047F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		42DE58E31C78312E006D047F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		42DE58E61C78312E006D047F /* DeshiRecipe.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DeshiRecipe.xcdatamodel; sourceTree = "<group>"; };
 		42DE58E81C78312E006D047F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,6 +51,10 @@
 		42DE58FD1C78312E006D047F /* DeshiRecipeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DeshiRecipeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		42DE59011C78312E006D047F /* DeshiRecipeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeshiRecipeUITests.swift; sourceTree = "<group>"; };
 		42DE59031C78312E006D047F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		42DE590F1C783555006D047F /* DeshiRecipeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeshiRecipeViewController.swift; sourceTree = "<group>"; };
+		42DE59111C78356D006D047F /* AddRecipeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddRecipeViewController.swift; sourceTree = "<group>"; };
+		42DE59131C78357C006D047F /* DetailsRecipeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsRecipeViewController.swift; sourceTree = "<group>"; };
+		42DE59151C7835A0006D047F /* RecipeListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeListTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,8 +106,11 @@
 			isa = PBXGroup;
 			children = (
 				42DE58DE1C78312E006D047F /* AppDelegate.swift */,
-				42DE58E01C78312E006D047F /* ViewController.swift */,
 				42DE58E21C78312E006D047F /* Main.storyboard */,
+				42DE59151C7835A0006D047F /* RecipeListTableViewCell.swift */,
+				42DE590F1C783555006D047F /* DeshiRecipeViewController.swift */,
+				42DE59131C78357C006D047F /* DetailsRecipeViewController.swift */,
+				42DE59111C78356D006D047F /* AddRecipeViewController.swift */,
 				42DE58E81C78312E006D047F /* Assets.xcassets */,
 				42DE58EA1C78312E006D047F /* LaunchScreen.storyboard */,
 				42DE58ED1C78312E006D047F /* Info.plist */,
@@ -196,6 +205,7 @@
 				TargetAttributes = {
 					42DE58DA1C78312E006D047F = {
 						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = G922VPJ64L;
 					};
 					42DE58F11C78312E006D047F = {
 						CreatedOnToolsVersion = 7.2.1;
@@ -259,8 +269,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42DE59121C78356D006D047F /* AddRecipeViewController.swift in Sources */,
+				42DE59141C78357C006D047F /* DetailsRecipeViewController.swift in Sources */,
 				42DE58E71C78312E006D047F /* DeshiRecipe.xcdatamodeld in Sources */,
-				42DE58E11C78312E006D047F /* ViewController.swift in Sources */,
+				42DE59161C7835A0006D047F /* RecipeListTableViewCell.swift in Sources */,
+				42DE59101C783555006D047F /* DeshiRecipeViewController.swift in Sources */,
 				42DE58DF1C78312E006D047F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -403,6 +416,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = DeshiRecipe/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.omarfaruqe.DeshiRecipe;
@@ -414,6 +428,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = DeshiRecipe/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.omarfaruqe.DeshiRecipe;
