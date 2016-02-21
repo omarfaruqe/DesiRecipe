@@ -45,7 +45,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="aXs-YC-yL3" kind="show" id="abB-77-dNe"/>
+                                    <segue destination="aXs-YC-yL3" kind="show" identifier="detailViewSegue" id="abB-77-dNe"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -57,7 +57,7 @@
                     <navigationItem key="navigationItem" title="Deshi Recipe" id="Fbu-dC-gb1">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="5KW-Qd-KRd">
                             <connections>
-                                <segue destination="YcA-VD-wow" kind="show" id="vNY-64-eQf"/>
+                                <segue destination="YcA-VD-wow" kind="show" identifier="addViewSegue" id="vNY-64-eQf"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -78,7 +78,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="UpJ-yK-MsX">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="UpJ-yK-MsX">
                                 <rect key="frame" x="2" y="64" width="596" height="536"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
@@ -120,13 +120,16 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eLr-kk-znD">
+                            <textField opaque="NO" clipsSubviews="YES" alpha="0.59999999999999998" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eLr-kk-znD">
                                 <rect key="frame" x="10" y="112.5" width="580" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="YEG-RY-4ea"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done"/>
+                                <connections>
+                                    <action selector="titleDoneButtonClicked:" destination="YcA-VD-wow" eventType="editingDidEnd" id="rMb-yz-tOb"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4K4-mq-sCg">
                                 <rect key="frame" x="0.0" y="530" width="600" height="70"/>
@@ -152,10 +155,9 @@
                                     <action selector="addRecipe:" destination="YcA-VD-wow" eventType="touchUpInside" id="FM9-4I-gkQ"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="eCo-ox-ieY">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.5" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="eCo-ox-ieY">
                                 <rect key="frame" x="2" y="160" width="596" height="300"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda. Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda. Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -180,7 +182,17 @@
                             <constraint firstItem="TfX-mG-mqd" firstAttribute="top" secondItem="PrE-zU-Ghq" secondAttribute="bottom" constant="8" symbolic="YES" id="uJj-u5-df8"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Add Recipe" id="ik5-Cp-sCV">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="xTm-lK-gdg">
+                            <connections>
+                                <action selector="doneButtonClicked:" destination="YcA-VD-wow" id="fi2-rD-rlP"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
+                        <outlet property="addButton" destination="PQa-h1-0jU" id="TpK-dv-M31"/>
+                        <outlet property="doneButton" destination="xTm-lK-gdg" id="1Kb-Ca-C9d"/>
+                        <outlet property="iCloudDocsButton" destination="4K4-mq-sCg" id="8ub-jM-sUG"/>
                         <outlet property="recipeContent" destination="eCo-ox-ieY" id="sY0-he-hcZ"/>
                         <outlet property="recipeTitle" destination="eLr-kk-znD" id="ceF-BB-w10"/>
                     </connections>

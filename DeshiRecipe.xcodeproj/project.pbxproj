@@ -18,6 +18,8 @@
 		42DE59121C78356D006D047F /* AddRecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42DE59111C78356D006D047F /* AddRecipeViewController.swift */; };
 		42DE59141C78357C006D047F /* DetailsRecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42DE59131C78357C006D047F /* DetailsRecipeViewController.swift */; };
 		42DE59161C7835A0006D047F /* RecipeListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42DE59151C7835A0006D047F /* RecipeListTableViewCell.swift */; };
+		42DE591A1C79302D006D047F /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42DE59191C79302D006D047F /* Recipe.swift */; };
+		42DE591C1C79308C006D047F /* RecipeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42DE591B1C79308C006D047F /* RecipeManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,8 @@
 		42DE59111C78356D006D047F /* AddRecipeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddRecipeViewController.swift; sourceTree = "<group>"; };
 		42DE59131C78357C006D047F /* DetailsRecipeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsRecipeViewController.swift; sourceTree = "<group>"; };
 		42DE59151C7835A0006D047F /* RecipeListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeListTableViewCell.swift; sourceTree = "<group>"; };
+		42DE59191C79302D006D047F /* Recipe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
+		42DE591B1C79308C006D047F /* RecipeManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +112,8 @@
 				42DE58DE1C78312E006D047F /* AppDelegate.swift */,
 				42DE58E21C78312E006D047F /* Main.storyboard */,
 				42DE59151C7835A0006D047F /* RecipeListTableViewCell.swift */,
+				42DE59191C79302D006D047F /* Recipe.swift */,
+				42DE591B1C79308C006D047F /* RecipeManager.swift */,
 				42DE590F1C783555006D047F /* DeshiRecipeViewController.swift */,
 				42DE59131C78357C006D047F /* DetailsRecipeViewController.swift */,
 				42DE59111C78356D006D047F /* AddRecipeViewController.swift */,
@@ -270,7 +276,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				42DE59121C78356D006D047F /* AddRecipeViewController.swift in Sources */,
+				42DE591C1C79308C006D047F /* RecipeManager.swift in Sources */,
 				42DE59141C78357C006D047F /* DetailsRecipeViewController.swift in Sources */,
+				42DE591A1C79302D006D047F /* Recipe.swift in Sources */,
 				42DE58E71C78312E006D047F /* DeshiRecipe.xcdatamodeld in Sources */,
 				42DE59161C7835A0006D047F /* RecipeListTableViewCell.swift in Sources */,
 				42DE59101C783555006D047F /* DeshiRecipeViewController.swift in Sources */,
@@ -503,6 +511,7 @@
 				42DE59081C78312E006D047F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		42DE59091C78312E006D047F /* Build configuration list for PBXNativeTarget "DeshiRecipeTests" */ = {
 			isa = XCConfigurationList;
@@ -511,6 +520,7 @@
 				42DE590B1C78312E006D047F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		42DE590C1C78312E006D047F /* Build configuration list for PBXNativeTarget "DeshiRecipeUITests" */ = {
 			isa = XCConfigurationList;
@@ -519,6 +529,7 @@
 				42DE590E1C78312E006D047F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

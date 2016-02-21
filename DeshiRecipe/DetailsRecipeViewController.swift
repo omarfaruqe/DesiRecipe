@@ -9,6 +9,8 @@
 import UIKit
 
 class DetailsRecipeViewController: UIViewController {
+    
+    var preRecipe:String?
 
     @IBOutlet weak var recipeContent: UITextView!
     
@@ -18,6 +20,9 @@ class DetailsRecipeViewController: UIViewController {
         recipeContent.backgroundColor = UIColor.blackColor().colorWithAlphaComponent(0.2)
     }
 
+    override func viewDidAppear(animated: Bool) {
+        self.title = preRecipe
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

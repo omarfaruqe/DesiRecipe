@@ -9,6 +9,8 @@
 import UIKit
 
 class RecipeListTableViewCell: UITableViewCell {
+    
+    var recipe:String?
 
     override func awakeFromNib() {
         super.awakeFromNib()

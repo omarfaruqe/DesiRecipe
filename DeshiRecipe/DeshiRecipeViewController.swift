@@ -13,6 +13,8 @@ class DeshiRecipeViewController: UITableViewController {
     let recipeName = ["Item", "Item1", "Item2", "Item3"]
     let recipeRegion = ["Bangladeshi","Indian","South Indian", "Chinese", "Thai"]
     
+    let recipeDic:[String:[String]] = ["Bangladeshi":["Fish Fry", "Chicken Curry", "Vorta", "Polao"], "Indian":["Iddiuppum", "Idli", "Alu Bokhara"]]
+    
     
 
     override func viewDidLoad() {
@@ -31,18 +33,16 @@ class DeshiRecipeViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return recipeRegion.count
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         return recipeName.count
     }
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("recipeCell", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("recipeCell", forIndexPath: indexPath) as! RecipeListTableViewCell
         
         if(indexPath.item % 2 == 0){
             cell.backgroundColor = UIColor.clearColor().colorWithAlphaComponent(0.0)
@@ -61,6 +61,9 @@ class DeshiRecipeViewController: UITableViewController {
         default:
             cell.textLabel?.text = recipeName[indexPath.row]
         }
+        
+        cell.recipe = (cell.textLabel?.text!)!
+        cell.textLabel?.textColor = UIColor.whiteColor()
 
         return cell
     }
@@ -80,42 +83,19 @@ class DeshiRecipeViewController: UITableViewController {
         return true
     }
     
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if editingStyle == .Delete {
-            // Delete the row from the data source
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-        } else if editingStyle == .Insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
+    
     // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if(segue.identifier == "detailViewSegue"){
+            let cell = sender as! RecipeListTableViewCell
+            let detailView = segue.destinationViewController as! DetailsRecipeViewController
+            detailView.preRecipe = cell.recipe
+        }
+        if(segue.identifier == "addViewSegue"){
+            let addView = segue.destinationViewController as! AddRecipeViewController
+            addView.title = "Add New Recipe"
+        }
     }
-    */
+
 
 }
