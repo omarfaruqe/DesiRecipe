@@ -20,6 +20,7 @@
 		42DE59161C7835A0006D047F /* RecipeListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42DE59151C7835A0006D047F /* RecipeListTableViewCell.swift */; };
 		42DE591A1C79302D006D047F /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42DE59191C79302D006D047F /* Recipe.swift */; };
 		42DE591C1C79308C006D047F /* RecipeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42DE591B1C79308C006D047F /* RecipeManager.swift */; };
+		42DE591E1C7A20DF006D047F /* NSUserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42DE591D1C7A20DF006D047F /* NSUserDefaultsManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		42DE59151C7835A0006D047F /* RecipeListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeListTableViewCell.swift; sourceTree = "<group>"; };
 		42DE59191C79302D006D047F /* Recipe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 		42DE591B1C79308C006D047F /* RecipeManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeManager.swift; sourceTree = "<group>"; };
+		42DE591D1C7A20DF006D047F /* NSUserDefaultsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSUserDefaultsManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 				42DE58E21C78312E006D047F /* Main.storyboard */,
 				42DE59151C7835A0006D047F /* RecipeListTableViewCell.swift */,
 				42DE59191C79302D006D047F /* Recipe.swift */,
+				42DE591D1C7A20DF006D047F /* NSUserDefaultsManager.swift */,
 				42DE591B1C79308C006D047F /* RecipeManager.swift */,
 				42DE590F1C783555006D047F /* DeshiRecipeViewController.swift */,
 				42DE59131C78357C006D047F /* DetailsRecipeViewController.swift */,
@@ -280,6 +283,7 @@
 				42DE59141C78357C006D047F /* DetailsRecipeViewController.swift in Sources */,
 				42DE591A1C79302D006D047F /* Recipe.swift in Sources */,
 				42DE58E71C78312E006D047F /* DeshiRecipe.xcdatamodeld in Sources */,
+				42DE591E1C7A20DF006D047F /* NSUserDefaultsManager.swift in Sources */,
 				42DE59161C7835A0006D047F /* RecipeListTableViewCell.swift in Sources */,
 				42DE59101C783555006D047F /* DeshiRecipeViewController.swift in Sources */,
 				42DE58DF1C78312E006D047F /* AppDelegate.swift in Sources */,

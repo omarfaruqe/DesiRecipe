@@ -65,9 +65,10 @@ class AddRecipeViewController: UIViewController {
             self.activityIndicator.stopAnimating()
         }
         
-        let defaults = NSUserDefaults.standardUserDefaults()
+        NSUserDefaultsManager.synchronize()
+//        let defaults = NSUserDefaults.standardUserDefaults()
         //var myobject =
-        defaults.setObject("mystring", forKey: "myobject") // as? String
+//        defaults.setObject("mystring", forKey: "myobject") // as? String
         
     }
     
