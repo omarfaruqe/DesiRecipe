@@ -10,7 +10,7 @@ import UIKit
 
 class DetailsRecipeViewController: UIViewController {
     
-    var preRecipe:String?
+    var preRecipe:Recipe?
 
     @IBOutlet weak var recipeContent: UITextView!
     
@@ -21,7 +21,8 @@ class DetailsRecipeViewController: UIViewController {
     }
 
     override func viewDidAppear(animated: Bool) {
-        self.title = preRecipe
+        self.title = preRecipe?.title
+        self.recipeContent.text = preRecipe?.content
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

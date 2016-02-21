@@ -15,8 +15,6 @@ class DeshiRecipeViewController: UITableViewController {
     
     let recipeDic:[String:[String]] = ["Bangladeshi":["Fish Fry", "Chicken Curry", "Vorta", "Polao"], "Indian":["Iddiuppum", "Idli", "Alu Bokhara"]]
     
-    
-
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -25,6 +23,12 @@ class DeshiRecipeViewController: UITableViewController {
         tableView.backgroundColor = UIColor.brownColor() //.colorWithAlphaComponent(0.0)
     }
 
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        tableView.reloadData()
+        navigationController?.navigationBar.alpha = 0.5
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -33,11 +37,11 @@ class DeshiRecipeViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return recipeRegion.count
+        return 1 //recipeRegion.count
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return recipeName.count
+        return RecipeManager.recipes.count
     }
 
     
@@ -62,15 +66,16 @@ class DeshiRecipeViewController: UITableViewController {
             cell.textLabel?.text = recipeName[indexPath.row]
         }
         
-        cell.recipe = (cell.textLabel?.text!)!
-        cell.textLabel?.textColor = UIColor.whiteColor()
+        let recipe = RecipeManager.recipes[indexPath.item]
+        cell.textLabel?.text = recipe.title
+        cell.recipe = recipe
 
         return cell
     }
     
-    override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return recipeRegion[section]
-    }
+//    override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+//        return recipeRegion[section]
+//    }
     
     override func tableView(tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
         let headerView = view as! UITableViewHeaderFooterView
@@ -81,6 +86,13 @@ class DeshiRecipeViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
         return true
+    }
+    
+    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        if(editingStyle == .Delete){
+            RecipeManager.deleteRecipe(indexPath.item)
+            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+        }
     }
     
     

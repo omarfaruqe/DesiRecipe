@@ -66,10 +66,10 @@
             </objects>
             <point key="canvasLocation" x="1051" y="-315"/>
         </scene>
-        <!--DetailView-->
+        <!--Details Recipe View Controller-->
         <scene sceneID="Ogp-DI-3Hn">
             <objects>
-                <viewController title="DetailView" id="aXs-YC-yL3" customClass="DetailsRecipeViewController" customModule="DeshiRecipe" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="aXs-YC-yL3" customClass="DetailsRecipeViewController" customModule="DeshiRecipe" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="8uP-PE-EKD"/>
                         <viewControllerLayoutGuide type="bottom" id="n3k-JN-qor"/>
@@ -81,7 +81,6 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="UpJ-yK-MsX">
                                 <rect key="frame" x="2" y="64" width="596" height="536"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -102,10 +101,10 @@
             </objects>
             <point key="canvasLocation" x="1051" y="438"/>
         </scene>
-        <!--AddView-->
+        <!--Add Recipe-->
         <scene sceneID="LIt-gE-qZu">
             <objects>
-                <viewController title="AddView" id="YcA-VD-wow" customClass="AddRecipeViewController" customModule="DeshiRecipe" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="YcA-VD-wow" customClass="AddRecipeViewController" customModule="DeshiRecipe" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="PrE-zU-Ghq"/>
                         <viewControllerLayoutGuide type="bottom" id="jbg-am-2pl"/>
@@ -115,13 +114,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TfX-mG-mqd">
-                                <rect key="frame" x="20" y="72" width="560" height="32.5"/>
+                                <rect key="frame" x="20" y="72" width="560" height="33"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" alpha="0.59999999999999998" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eLr-kk-znD">
-                                <rect key="frame" x="10" y="112.5" width="580" height="40"/>
+                                <rect key="frame" x="10" y="113" width="580" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="YEG-RY-4ea"/>
                                 </constraints>
@@ -155,8 +154,12 @@
                                     <action selector="addRecipe:" destination="YcA-VD-wow" eventType="touchUpInside" id="FM9-4I-gkQ"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.5" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="eCo-ox-ieY">
-                                <rect key="frame" x="2" y="160" width="596" height="300"/>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="O2D-PZ-dDL">
+                                <rect key="frame" x="282" y="281" width="37" height="37"/>
+                                <color key="color" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.5" contentMode="scaleToFill" misplaced="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="eCo-ox-ieY">
+                                <rect key="frame" x="0.0" y="161" width="596" height="300"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -170,6 +173,8 @@
                             <constraint firstAttribute="trailingMargin" secondItem="eCo-ox-ieY" secondAttribute="trailing" constant="-18" id="LpC-hl-Xxy"/>
                             <constraint firstItem="eCo-ox-ieY" firstAttribute="leading" secondItem="G0H-lV-X8m" secondAttribute="leadingMargin" constant="-18" id="P3p-1P-AX0"/>
                             <constraint firstItem="eCo-ox-ieY" firstAttribute="top" secondItem="eLr-kk-znD" secondAttribute="bottom" constant="8" symbolic="YES" id="UiQ-SH-vBS"/>
+                            <constraint firstItem="O2D-PZ-dDL" firstAttribute="centerX" secondItem="eLr-kk-znD" secondAttribute="centerX" id="Z5i-6O-ZAq"/>
+                            <constraint firstItem="O2D-PZ-dDL" firstAttribute="centerY" secondItem="G0H-lV-X8m" secondAttribute="centerY" id="Z7I-pr-zcl"/>
                             <constraint firstAttribute="trailingMargin" secondItem="TfX-mG-mqd" secondAttribute="trailing" id="ZsA-nj-DQE"/>
                             <constraint firstItem="eLr-kk-znD" firstAttribute="leading" secondItem="G0H-lV-X8m" secondAttribute="leadingMargin" constant="-10" id="ap9-HI-yxG"/>
                             <constraint firstAttribute="trailingMargin" secondItem="4K4-mq-sCg" secondAttribute="trailing" constant="-20" id="cNy-R4-65k"/>
@@ -190,6 +195,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="activityIndicator" destination="O2D-PZ-dDL" id="XAI-Qv-Oyo"/>
                         <outlet property="addButton" destination="PQa-h1-0jU" id="TpK-dv-M31"/>
                         <outlet property="doneButton" destination="xTm-lK-gdg" id="1Kb-Ca-C9d"/>
                         <outlet property="iCloudDocsButton" destination="4K4-mq-sCg" id="8ub-jM-sUG"/>

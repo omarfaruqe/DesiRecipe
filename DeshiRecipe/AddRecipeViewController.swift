@@ -15,6 +15,7 @@ class AddRecipeViewController: UIViewController {
     @IBOutlet weak var addButton: UIButton!
     @IBOutlet weak var iCloudDocsButton: UIButton!
     @IBOutlet weak var doneButton: UIBarButtonItem!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     
     override func viewDidLoad() {
@@ -49,6 +50,19 @@ class AddRecipeViewController: UIViewController {
 
     
     @IBAction func addRecipe(sender: UIButton) {
+        
+        activityIndicator.startAnimating()
+        
+        RecipeManager.addRecipe(recipeTitle.text!, content: recipeContent.text!)
+        
+        recipeTitle.text = ""
+        recipeContent.text = ""
+        
+        let time = dispatch_time(DISPATCH_TIME_NOW, Int64(0.5 * Double(NSEC_PER_SEC)))
+        
+        dispatch_after(time, dispatch_get_main_queue()){
+            self.activityIndicator.stopAnimating()
+        }
     }
     
     @IBAction func iCloudDocs(sender: UIButton) {
