@@ -30,6 +30,7 @@ class AddRecipeViewController: UIViewController {
 
         recipeTitle.backgroundColor = UIColor.blackColor().colorWithAlphaComponent(0.2)
         recipeContent.backgroundColor = UIColor.blackColor().colorWithAlphaComponent(0.2)
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -63,6 +64,11 @@ class AddRecipeViewController: UIViewController {
         dispatch_after(time, dispatch_get_main_queue()){
             self.activityIndicator.stopAnimating()
         }
+        
+        let defaults = NSUserDefaults.standardUserDefaults()
+        //var myobject =
+        defaults.setObject("mystring", forKey: "myobject") // as? String
+        
     }
     
     @IBAction func iCloudDocs(sender: UIButton) {

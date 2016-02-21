@@ -21,6 +21,9 @@ class DeshiRecipeViewController: UITableViewController {
         tableView.rowHeight = 70
         //tableView.backgroundView = UIImageView(image: UIImage(named: "Bread"))
         tableView.backgroundColor = UIColor.brownColor() //.colorWithAlphaComponent(0.0)
+        
+        let defaults = NSUserDefaults.standardUserDefaults()
+        print(defaults.objectForKey("myobject")) //as? String
     }
 
     override func viewDidAppear(animated: Bool) {
